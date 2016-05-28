@@ -72,7 +72,7 @@ You can also try using `fab gpu_go`. Now try running some code from the remote s
 
 ```
 cd ~/deeplearn-tests/tutorials
-THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python mnist-keras-cnn.py
+THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python mnist-keras-mlp.py
 ```
 
 If that works, you're good to go. Don't forget to shut down the instance once you're done, unless you like spending money:
