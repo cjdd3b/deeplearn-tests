@@ -33,9 +33,17 @@ echo "backend: TkAgg" > ~/.matplotlib/matplotlibrc
  
 GPU setup is optional but worthwhile. And it comes with a catch: namely that it won't work on a Mac unless you have an NVIDIA graphics card (which you probably don't). The libraries we're using here, namely Theano, rely on [CUDA](https://en.wikipedia.org/wiki/CUDA), which is an NVIDIA-specific parallel processing platform. That means your best option for using a GPU is to boot up an EC2 instance with NVIDIA GPUs.
 
-This should be pretty painless, so long as you have a key to set up servers in Amazon's EC2 service. First, start a GPU instance on EC2. This takes a few minutes.
+This should be pretty painless, so long as you have a key to set up servers in Amazon's EC2 service.
 
-First you may want to set some environment variables, described here:
+First log into the AWS console. You'll need to set up a few things if you haven't already:
+
+  1. Create or download an EC2 keypair in `us-west-1` (if you're using default settings). You can call it "deeplearn" to save yourself a step later.
+
+  2. Create an IAM role, or find an existing one, and give it full EC2 permissions. You'll need to copy the access and secret into a local ~/.boto file, as described here.
+
+  3. Be sure your default EC2 security group allows you to SSH to instances wherever you are.
+
+Next you'll want to set some local environment variables, described here:
 
 **Required:**
 
