@@ -1,7 +1,7 @@
 Deep learning tests
 ===================
 
-Sketchbook for developing a simple binary classifier in Python using deep learning techniques such as multilayer perceptrons and convolutional neural networks. Includes a number of tutorials and examples, mostly to get the hang of various libraries available for the task.
+Sketchbook for developing a simple binary classifier in Python using deep learning techniques such as multilayer perceptrons and convolutional neural networks. Includes a growing number of tutorials and examples, mostly to get the hang of various libraries available for the task.
 
 Installation
 ------------
