@@ -54,7 +54,7 @@ Once that's set up, you can create and bootstrap an instance by typing:
 fab gpu_up
 ```
 
-Pay attention and follow the prompts. After that's done, SSH into the instance using NYTCar.pem:
+Pay attention and follow the prompts. After that's done, SSH into the instance using your key:
 
 ```
 ssh -i ~/path/to/your_key.pem ubuntu@gpu-server-hostname-from-previous-step
