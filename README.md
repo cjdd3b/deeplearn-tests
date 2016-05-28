@@ -71,7 +71,7 @@ ssh -i ~/path/to/your_key.pem ubuntu@gpu-server-hostname-from-previous-step
 You can also try using `fab gpu_go`. Now try running some code from the remote server. This app should live in ~/deeplearn-tests.
 
 ```
-cd ~/deeplearn-test/tutorials
+cd ~/deeplearn-tests/tutorials
 THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python mnist-keras-cnn.py
 ```
 
