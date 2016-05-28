@@ -7,6 +7,8 @@ credentials and saved to ~/.boto. The contents should look like this:
 [Credentials]
 aws_access_key_id = <your_access_key_here>
 aws_secret_access_key = <your_secret_key_here>
+[Boto]
+ec2_region_name = us-west-1
 '''
 import time, socket, os
 import boto.ec2
@@ -19,7 +21,7 @@ from fabric.colors import green as _green, red as _red, yellow as _yellow
 # Globals, set via environment variables
 
 # Required
-GPU_INSTANCE_KEY = os.environ.get('GPU_INSTANCE_KEY') # Minus the .pem
+GPU_INSTANCE_KEY = os.environ.get('GPU_INSTANCE_KEY', 'deeplearn') # Minus the .pem
 
 # Optional
 GPU_INSTANCE_REGION = os.environ.get('GPU_INSTANCE_REGION', 'us-west-1') # N. California
