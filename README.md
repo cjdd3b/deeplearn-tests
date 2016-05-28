@@ -39,7 +39,7 @@ First log into the AWS console. You'll need to set up a few things if you haven'
 
   1. Create or download an EC2 keypair in `us-west-1` (if you're using default settings). You can call it "deeplearn" to save yourself a step later.
 
-  2. Create an IAM role, or find an existing one, and give it full EC2 permissions. You'll need to copy the access and secret into a local ~/.boto file, as described here.
+  2. Create an IAM role, or find an existing one, and give it full EC2 permissions. You'll need to copy the access and secret into a local ~/.boto file, [as described here](https://github.com/cjdd3b/deeplearn-tests/blob/master/dotfiles/.boto).
 
   3. Be sure your default EC2 security group allows you to SSH to instances wherever you are.
 
