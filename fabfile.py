@@ -28,7 +28,7 @@ GPU_INSTANCE_TYPE = os.environ.get('GPU_INSTANCE_TYPE', 'g2.2xlarge')
 GPU_INSTANCE_NAME = os.environ.get('GPU_INSTANCE_NAME', 'deeplearn-gpu') 
 
 # Env settings
-env.project_repo = 'git@github.com:newsdev/deeplearn-test.git'
+env.project_repo = 'git@github.com:cjdd3b/deeplearn-test.git'
 env.user = "ubuntu"
 env.forward_agent = True
 
