@@ -4,7 +4,7 @@ ecdsa==0.13
 Fabric==1.10.2
 Keras==0.3.2
 matplotlib==1.5.1
-numpy==1.10.4
+numpy==1.11.0
 paramiko==1.16.0
 pycrypto==2.6.1
 pyparsing==2.1.0
