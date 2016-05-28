@@ -30,7 +30,8 @@ GPU_INSTANCE_TYPE = os.environ.get('GPU_INSTANCE_TYPE', 'g2.2xlarge')
 GPU_INSTANCE_NAME = os.environ.get('GPU_INSTANCE_NAME', 'deeplearn-gpu') 
 
 # Env settings
-env.project_repo = 'https://github.com/cjdd3b/deeplearn-tests.git'
+env.project_name = 'deeplearn-tests'
+env.project_repo = 'https://github.com/cjdd3b/%s.git' % env.project_name
 env.user = "ubuntu"
 env.forward_agent = True
 
@@ -104,14 +105,14 @@ def _launch_gpu():
 
 def _bootstrap_gpu():
     _set_env()
-    print(_green("Bootstrapping (this takes a while) ..."))
+    print(_green("Bootstrapping (watch for prompts) ..."))
     with api.settings(warn_only=True, host_string=env.host):
         api.put(local_path='./dotfiles/.bashrc', remote_path='/home/ubuntu/.bashrc')
         api.run('git clone %s' % env.project_repo)
         api.run('sudo apt-get update')
         api.run('sudo apt-get install python-dev python-setuptools pkg-config liblapack-dev')
         api.run('sudo easy_install pip')
-        api.run('sudo -H pip install -r ~/deeplearn-tests/requirements.txt')
+        api.run('sudo -H pip install -r ~/%s/requirements.txt' % env.project_name)
     print(_green("Done!"))
 
 ########## TASKS ##########
